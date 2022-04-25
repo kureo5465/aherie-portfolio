@@ -1,0 +1,84 @@
+body {
+   font-size: 1.6rem;
+}
+
+.flex-container2{
+  display: flex;
+  flex-direction: row;
+}
+
+.maintitle {
+  font-size: 4.0rem;
+}
+
+
+.mb-l {
+  margin-bottom: 40px;
+}
+
+
+.acherie {
+  top: 60%;
+  left: 3%;
+  font-size: 1.5rem;
+}
+
+.header {
+
+  &__logo {
+    width: 20%;
+  }
+
+  &__flex {
+    height: 90px;
+  }
+
+ &__item {
+   margin-right: 48px;
+   font-size: 1.6rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+ }
+}
+
+.acherie__logo {
+  &-img {
+    top: 30%;
+    width: 400px;
+  }
+}
+
+.works {
+  &__item {
+    flex: 0 0 calc(100%/3 - 10px);
+    word-break: break-all;
+  }
+
+  &__text-item, &__sub-text{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+.menu {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    flex: 0 0 calc(100%/2 - 10px);
+  }
+} 
+
+.about {
+  &__img {
+    flex: 0 0 220px;
+    margin-right: 40px;
+    margin-bottom: 90px;
+  }
+}
+

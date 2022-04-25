@@ -1,0 +1,432 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+   font-size: 1.3rem;
+   color: $titlecor;
+   font-family: $hiragino;
+   scroll-behavior: smooth;
+   
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.inner {
+  width: 1380px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto;
+}
+
+.maintitle {
+  font-size: 2.2rem;
+  font-family: 'Bad Script', cursive;
+  font-weight: normal;
+}
+
+.text-space {
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mb-ss {
+  margin-bottom: 4px;
+}
+
+.mb-s {
+  margin-bottom: 8px;
+}
+
+.mb-sm {
+  margin-bottom: 10px;
+}
+
+.mb-m {
+  margin-bottom: 20px;
+}
+
+.mb-l {
+  margin-bottom: 30px;
+}
+
+.mb-ll {
+  margin-bottom: 50px;
+}
+
+section {
+  padding: 120px 0px;
+
+  &:nth-of-type(even) {
+    background-color: $sectioncor;
+  }
+}
+
+
+a {
+  display: block;
+  width: 100%;
+}
+
+.acherie {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  font-size: 1rem;
+  z-index: 10;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 3px 3px -3px rgba(126, 121, 121, 0.2);
+
+ &__container {
+    width: 960px;
+    max-width: calc(100% - 10%);
+    margin: 0 auto;
+  }
+  
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+ }
+
+ &__logo{
+   display: flex;
+   width: 30%;
+ }
+
+ &__list {
+   display: flex;
+   margin-top: 10px;
+ }
+
+ &__item {
+   margin-right: 10px;
+   font-size: 1.2rem;
+   font-family: 'Josefin Sans', sans-serif;
+   color: $titlecor;
+
+  &:last-child {
+    margin-right: 0;
+  }
+ }
+}
+
+.acherie__logo {
+  background-image: url(../images/headimg.webp);
+  min-height: 110vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &-img {
+    position: absolute;
+    top: 40%;
+    width: 250px;
+
+    & a:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.fas.fa-chevron-right {
+  font-size: 1.0rem;
+}
+
+.welcom {
+  &__maintitle {
+    @extend .maintitle;
+    @extend .mb-m;
+    text-align: center;
+  }
+
+  &__maintext {
+    @extend .text-space;
+    @extend .mb-m;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__subtext {
+    text-align: center;
+    @extend .text-space;
+  }
+}
+
+.works {
+  &__maintitle {
+    @extend .maintitle;
+    @extend .mb-m;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    @extend .text-space;
+    @extend .mb-m;
+  }
+
+  &__container {
+    @extend .flex-container;
+    @extend .mb-ll;
+  }
+
+  &__item {
+    flex: 0 0 calc(100%/2 - 5px);
+    @extend .mb-l;
+    word-break: break-all;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    @extend .mb-s
+  }
+
+  &__text-item {
+    font-size: 1rem;
+    font-weight: bold;
+    @extend .text-space;
+  }
+
+  &__sub-text {
+    font-size: 1rem;
+    @extend .text-space;
+  }
+
+  &__btn {
+      width: 80%;
+      border-radius: 20px;
+      text-align: center;
+      background-color: $titlecor;
+      color: #fff;
+      font-weight: bold;
+      box-sizing: border-box;
+      margin: 0 auto;
+      transition: all 1s;
+
+    & a {
+        display: block;
+        width: 100%;
+        padding: 20px; 
+        letter-spacing: 1px;
+        
+        &:hover {
+          transition: all 3s;
+          background-color: #fff;
+          color: $titlecor;
+          border-radius: 20px;
+        }
+    }
+  }
+}
+
+.menu {
+    @extend .text-space;
+
+    &__item {
+      @extend .mb-l;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__container {
+      display: block;
+    }
+
+    &__maintitle {
+      @extend .maintitle;
+      @extend .mb-m;
+      text-align: center;
+    }
+  
+    &__subtext {
+      text-align: center;
+      @extend .text-space;
+      @extend .mb-l;
+    } 
+
+    &__img {
+      @extend .mb-s;
+      text-align: center;
+    }
+
+    &__text-item {
+      @extend .mb-s ;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    &__price {
+      text-align: center;
+      font-size: 1rem;
+    }
+}
+
+.about {
+  @extend .text-space;
+
+  &__maintitle {
+    @extend .maintitle;
+    @extend .mb-m;
+    text-align: center;
+  }
+
+  &__maintext {
+    @extend .text-space;
+    @extend .mb-m;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__job, &__name {
+    text-align: center;
+  }
+
+  &__job {
+    @extend .mb-s;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    @extend .mb-m;
+  }
+
+  &__subtext {
+    @extend .mb-m;
+  }
+
+  &__container {
+    @extend .flex-container2
+  }
+
+  &__img {
+    width: 100px;
+    max-width: 100%;
+    @extend .mb-m;
+
+    & > img {
+      border-radius: 50%;
+    }
+  }
+
+  &__skill {
+    @extend .mb-m;
+  }
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      display: block;
+      width: 30px;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.contact {
+  &__maintitle {
+    @extend .maintitle;
+    @extend .mb-m;
+    text-align: center;
+  }
+
+  &__subtext {
+    text-align: center;
+    @extend .text-space;
+    @extend .mb-l;
+  }
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      display: block;
+      width: 30px;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.thanks {
+  font-family: 'Dawning of a New Day', cursive;
+  font-size: 2.5rem;
+  width: 80%;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.footer {
+  &__page-top {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    background-color: $footercor;
+  }
+
+  &__copyright {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #fff;
+      background-color: $titlecor;
+      padding: 30px 0;
+  }
+
+  &__icon {
+    @extend .mb-s;
+  }
+}
+
+
